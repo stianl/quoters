@@ -4,6 +4,6 @@ COPY . .
 RUN mvn clean verify
 
 FROM openjdk:17-slim
-COPY --from=backend /backend/target/lshop-0.0.1-SNAPSHOT.jar /app/
+COPY --from=backend /backend/target/quoters-incorporated-0.0.1-SNAPSHOT.jar /app/
 EXPOSE 8080
-CMD ["java", "-jar", "/app/lshop-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/quoters-incorporated-0.0.1-SNAPSHOT.jar"]
